@@ -6,17 +6,23 @@ layout: layouts/base.njk
 {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
 {% include "public/css/prism-diff.css" %}
 {%- endcss %}
-<h1>{{ title }}</h1>
-
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
+<article class="singlePost">
+<header>
+<h2 class="dayHeader">{{ title }}</h2>
+<div class="post-meta">
+  <time class="visually-hidden" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+	<div class="tags-list">{%- for tag in tags | filterTagList %}
 	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+	<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+	{%- endfor %}</div>
+</div>
+
+</header>
 
 {{ content | safe }}
+
+
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}

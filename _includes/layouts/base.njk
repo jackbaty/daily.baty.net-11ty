@@ -3,27 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
+		<title>{{ metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="//fonts.googleapis.com/css?family=Ubuntu:400,500i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
-
-{#-
-		CSS bundles are provided via the eleventy-plugin-bundle plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-
-		Learn more: https://github.com/11ty/eleventy-plugin-bundle
-#}
+		<meta name="generator" content="{{ eleventy.generator }}">
 
 		{#- Add to the CSS bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{%- css %}{# add your own CSS! #}{% endcss %}
+		{%- css %}{% include "public/css/pico.min.css" %}{% include "public/css/custom.css" %}{% endcss %}
 
 		{#- Render the CSS bundle #}
 		{%- if eleventy.env.runMode === "serve" %}
@@ -35,13 +29,16 @@
 		{%- endif %}
 	</head>
 	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
+<a href="#skip" class="visually-hidden">Skip to main content</a>
+<header>
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1><a href="/">{{ metadata.title }}</a></h1>
+			<h3>{{ description or metadata.description }}</h3>
+		</div>
+	<img id="extra-image" src="/img/headers/jack-and-iphone.png" />
+	</div>
+<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
@@ -49,13 +46,12 @@
 				{%- endfor %}
 				</ul>
 			</nav>
-		</header>
-
-		<main id="skip">
+</header>
+		<main id="skip" class="container">
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
+		<footer><span>© Jack Baty, 2023</span></footer>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>

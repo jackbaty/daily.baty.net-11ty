@@ -1,0 +1,10 @@
+
+{% for post in postslist | reverse %}
+<article>
+<header>
+<h2 class="dayHeader"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+<div class="post-meta visually-hidden">{{ post.date | readableDate("DD") }}</div>
+</header>
+{{ post.content | safe }}
+</article>
+{% endfor %}
