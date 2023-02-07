@@ -6,4 +6,6 @@ eleventyNavigation:
 ---
 # About Me
 
-See [baty.net/about](https://baty.net/about/)
+For more about me, see [baty.net/about](https://baty.net/about/)
+
+For the best way to contact me (and I hope you do), see [Hello](https://baty.net/hello).
