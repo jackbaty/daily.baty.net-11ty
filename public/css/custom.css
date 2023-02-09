@@ -219,9 +219,9 @@ figure img {
 	margin: 10px auto; }
 
 figure figcaption {
-	font-size: 0.8em;
-	padding-top: 2px;
-	text-align: center;}
+    font-size: 0.8em;
+    padding-top: 2px;
+    text-align: center;}
 
 img.sideImage {
 	float: right;

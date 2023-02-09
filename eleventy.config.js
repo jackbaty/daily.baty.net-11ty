@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 
+
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
@@ -88,6 +89,11 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+	// shortcode for right-aligned small image
+	eleventyConfig.addShortcode("sideImage", function(path, alt)  {
+		return `<img class="sideImage" src="${path}" alt="${alt}">`});
+
 
 	// Features to make your build faster (when you need them)
 
