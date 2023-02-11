@@ -46,6 +46,7 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
+				<li class="nav-item"><a rel="me" href="https://baty.social/@jack"><img src="/img/icons/mastodon-icon.svg" width="16px"></a></li>
 				</ul>
 			</nav>
 </header>
