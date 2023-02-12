@@ -1,10 +1,16 @@
 
+{% set lastDate = '' %}
 {% for post in postslist | reverse %}
+  {% if post.date.toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'}) != lastDate %}
 <article>
 <header>
 <h2 class="dayHeader"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
 <div class="post-meta visually-hidden">{{ post.date | readableDate("DD") }}</div>
 </header>
+**{{ lastDate }}**
+{% set lastDate = post.date.toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'}) %}
+{% endif %}
 {{ post.content | safe }}
 </article>
+
 {% endfor %}
