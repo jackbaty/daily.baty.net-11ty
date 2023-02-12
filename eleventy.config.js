@@ -35,6 +35,15 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+
+const dateISO = (date) => {
+  const jsDate = new Date(date);
+  const dt = DateTime.fromJSDate(jsDate);
+  return dt.toISO();
+};
+eleventyConfig.addFilter("dateISO", dateISO);
+
+
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
@@ -89,6 +98,8 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
 	// shortcode for right-aligned small image
 	eleventyConfig.addShortcode("sideImage", function(path, alt)  {
