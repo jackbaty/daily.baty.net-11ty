@@ -1,10 +1,23 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Archive
+  key: Journal
   order: 2
 ---
-<h1>Archive</h1>
+<article>
+<header>
+<h2 class="">Journal Archive</h2>
+</header>
 
-{% set postslist = collections.posts %}
+{% set postslist = collections.journal %}
 {% include "postslist.njk" %}
+
+</article>
+
+{#
+<ul>
+{%- for post in collections.all -%}
+  <li><a href="{{ post.url }}">{{post.url}} - {{ post.data.title }}</a></li>
+{%- endfor -%}
+</ul>
+#}

@@ -35,13 +35,17 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
+	eleventyConfig.addCollection("myHomeCollection", function(collectionApi) {
+		return collectionApi.getFilteredByTags("post", "journal");
+	});
 
-const dateISO = (date) => {
-  const jsDate = new Date(date);
-  const dt = DateTime.fromJSDate(jsDate);
-  return dt.toISO();
-};
-eleventyConfig.addFilter("dateISO", dateISO);
+
+	const dateISO = (date) => {
+		const jsDate = new Date(date);
+		const dt = DateTime.fromJSDate(jsDate);
+		return dt.toISO();
+	};
+	eleventyConfig.addFilter("dateISO", dateISO);
 
 
 	// Filters
@@ -82,7 +86,7 @@ eleventyConfig.addFilter("dateISO", dateISO);
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+		return (tags || []).filter(tag => ["all", "nav", "post", "posts", "journal"].indexOf(tag) === -1);
 	});
 
 	// Customize Markdown library settings:

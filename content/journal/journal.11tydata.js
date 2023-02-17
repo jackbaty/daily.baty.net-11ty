@@ -1,6 +1,6 @@
 module.exports = {
 	tags: [
-		"posts"
+		"journal"
 	],
 	"layout": "layouts/post.njk",
 	"permalink": "/{{page.date.getFullYear() }}/{{ page.fileSlug }}/",
