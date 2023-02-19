@@ -9,6 +9,9 @@ TARGET=server01.baty.net
 build:
 	npx @11ty/eleventy
 
+clean:
+	rm -rf _site/
+
 checkpoint:
 	git add .
 	git diff-index --quiet HEAD || git commit -m "Publish checkpoint"
