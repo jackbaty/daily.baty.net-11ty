@@ -10,7 +10,9 @@ layout: layouts/base.njk
 <header>
 <h2 class="dayHeader">{{ title }}</h2>
 <div class="post-meta">
-  <time class="visually-hidden" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+  {%- if tags.includes("post") %}
+  <time class="" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+  {%- endif %}
 	<div class="tags-list">{%- for tag in tags | filterTagList %}
 	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 	<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
