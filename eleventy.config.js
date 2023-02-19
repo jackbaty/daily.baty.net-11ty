@@ -35,10 +35,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
 
-	eleventyConfig.addCollection("myHomeCollection", function(collectionApi) {
-		return collectionApi.getFilteredByTags("post", "journal");
-	});
-
 
 	const dateISO = (date) => {
 		const jsDate = new Date(date);
@@ -108,6 +104,14 @@ module.exports = function(eleventyConfig) {
 	// shortcode for right-aligned small image
 	eleventyConfig.addShortcode("sideImage", function(path, alt)  {
 		return `<img class="sideImage" src="${path}" alt="${alt}">`});
+
+	// My collections
+	eleventyConfig.addCollection("myHomeCollection", function(collectionApi) {
+		const journals = collectionApi.getFilteredByTags("journal");
+		const posts = collectionApi.getFilteredByTags("post");
+		return allHomePosts = [...journals,...posts];
+	});
+
 
 
 	// Features to make your build faster (when you need them)
