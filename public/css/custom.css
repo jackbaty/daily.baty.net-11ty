@@ -307,3 +307,7 @@ ul.archivelist li {
 .date-icon {
 width: 50px;
 }
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: 0.9em;
+}
