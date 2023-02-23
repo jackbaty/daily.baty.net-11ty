@@ -1,11 +1,13 @@
 ---
 title: "AirPods Max are amazing but I kind of hate them"
 date: "2022-05-10"
-categories: 
+categories:
   - "gear"
-tags: 
+tags:
   - "apple"
 ---
+
+![Jack wearing airpods max](/img/2022/20220510-airpods-max.jpg)
 
 I've had a pair of Apple's [AirPods Max](https://www.apple.com/airpods-max/) for almost exactly one year. The headphones (please don't call them "cans". That's unnecessary insider hoohah) look nice and sound very good, but I don't enjoy using them. I've been thinking about why that is, and came up with the following list.
 
