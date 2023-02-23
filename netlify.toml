@@ -11,6 +11,16 @@
   from = "/index.xml"
   to = "/feed/feed.xml"
 
+[[redirects]]
+  from = "/rss/"
+  to = "/feed/feed.xml"
+
+[[redirects]]
+  from = "/feed.rss"
+  to = "/feed/feed.xml"
+
+
+
 #[[plugins]]
 
 	# Opt-in to the Netlify Lighthouse plugin (choose one):
