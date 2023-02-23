@@ -10,7 +10,7 @@ It's happened again. I've hit a wall with using WordPress. WordPress can do anyt
 
 So that's what I've done.
 
-Baty.net has been ported to [Eleventy](https://11ty.dev). You're soaking in it. Apologies for any crazy RSS noise this might generate.
+Baty.net has been ported to [Eleventy](https://11ty.dev). You're soaking in it. Apologies for any crazy RSS noise this might generate. The original feed URLs are redirected to the new feed: [https://baty.net/feed/feed.xml](https://baty.net/feed/feed.xml) for Atom and [https://baty.net/feed/feed.json](https://baty.net/feed/feed.json) for JSON format.
 
 I've built it using a slightly modified version of the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) starter template. I'm staying as close to stock as I can while I learn my way around.
 
