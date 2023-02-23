@@ -13,7 +13,7 @@ I’m almost certainly using [Zotero](https://www.zotero.org/) wrong.
 
 Instead of for citations and research, I’m using Zotero as a bookmarking tool and read-later service, and it’s working really well. Is no one else doing this?
 
-I’ve used many tools meant for saving links for later, from del.icio.us to Pinboard to Instapaper to Pocket to Raindrop. All of them are fine. Some focus on social bookmarking, some on archiving, some are meant as “read later” services. And all of them are prettier than Zotero. And yet…
+I’ve used many tools meant for saving links for later, from del.icio.us to Pinboard to Instapaper to Pocket to Raindrop. All of them are fine. Some focus on social bookmarking, some on archiving, some are meant as “read later” services. And all of them are prettier than Zotero. And yet…
 
 I installed Zotero while tinkering with an Org mode note-taking workflow. Soon after, I installed the “Save to Zotero” Safari extension and started using that instead of my usual “Save to Pinboard” bookmarklet, just for something different. I was surprised to find that this has become my default.
 
