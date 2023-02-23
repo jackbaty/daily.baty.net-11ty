@@ -13,7 +13,6 @@
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
-
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
 		1. You can add to them using `{% css %}`
@@ -34,7 +33,16 @@
 		<script defer data-domain="baty.net" src="https://plausible.io/js/script.js"></script>
 	</head>
 	<body>
+		<div id="page-top">
+			<div id="site-title"><a href="/">Jack Baty</akkjj></div>
+		    <div id="site-description">Director of Unspecified Services</div>
+			<img id="hero-extra-image" src="http://static.baty.net/images/blog-headers/jack-and-iphone.png">
+		</div>
+		<div id="container">
+
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+
 
 		<header>
 			<a href="/" class="home-link">{{ metadata.title }}</a>
@@ -56,6 +64,7 @@
 
 		<footer></footer>
 
+		</div> <!-- /container -->
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
 </html>

@@ -53,8 +53,70 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	/*  max-width: 40em; (moved to #container)*/
 }
+
+#page-top {
+	background: url(http://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat;
+
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    z-index: 0;
+}
+#container {
+	max-width: 40em;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+#site-title {
+	text-transform: uppercase;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+    font-family: "Oswald";
+	font-size: 8vw;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 0;
+    color: white;
+}
+#site-title a {
+	text-decoration: none;
+    color: white;
+}
+#site-description {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+    color: white;
+	font-size: 20px;
+}
+
+img#hero-extra-image {
+	position: absolute;
+    height: 100px;
+    top: 100px;
+    right: 0px;
+}
+
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -90,6 +152,8 @@ a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
 }
+
+
 
 main {
 	padding: 1rem;
@@ -157,7 +221,7 @@ header {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 1em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 .welcome {
@@ -169,7 +233,7 @@ header {
 	color: var(--color-gray-90);
 	font-size: 1.25em;
 	line-height: 1.6;
-	margin-top: 1.2em;
+	margin-top: 1.0em;
 	margin-bottom: 0em;
 	padding: 0;
 }
