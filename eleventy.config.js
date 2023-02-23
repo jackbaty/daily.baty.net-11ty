@@ -1,4 +1,6 @@
 const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
 const markdownItAnchor = require("markdown-it-anchor");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -24,6 +26,7 @@ module.exports = function(eleventyConfig) {
 	// App plugins
 	eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
 	eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
+
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
@@ -88,6 +91,9 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
+
 
 	// Features to make your build faster (when you need them)
 

@@ -263,6 +263,10 @@ figcaption {
   color: var(--color-gray-90);
 }
 
+section.footnotes p {
+ font-size: 0.9em;
+}
+
 /* Tags */
 .post-tag {
 	display: inline-flex;
