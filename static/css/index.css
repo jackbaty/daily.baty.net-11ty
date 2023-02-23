@@ -72,10 +72,12 @@ p:last-child {
 }
 p {
 	line-height: 1.5;
+	font-size: 18px;
 }
 
 li {
 	line-height: 1.5;
+	font-size: 18px;
 }
 
 a[href] {
@@ -160,7 +162,7 @@ header {
 
 .welcome {
   /* padding-left: 1.5rem; */
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .welcome h2 {
@@ -168,7 +170,8 @@ header {
 	font-size: 1.25em;
 	line-height: 1.6;
 	margin-top: 1.2em;
-	margin-bottom: 1em;
+	margin-bottom: 0em;
+	padding: 0;
 }
 .home-link {
 	font-size: 1em; /* 16px /16 */
@@ -211,7 +214,7 @@ margin-bottom: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	margin-bottom: 1em;
+	/* margin-bottom: 1em; */
 }
 
 .home-posts article {
@@ -226,6 +229,7 @@ margin-bottom: 0;
 
 .postlist-date {
 	font-size: 0.8125em; /* 13px /16 */
+	font-weight: 300;
 	color: var(--color-gray-90);
 }
 .postlist-date {
@@ -234,7 +238,6 @@ margin-bottom: 0;
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
-
 	padding-right: .5em;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
@@ -242,6 +245,22 @@ margin-bottom: 0;
 }
 .postlist-item-active .postlist-link {
 	font-weight: bold;
+}
+li .postlist-link {
+  font-weight: 500;
+}
+
+figure {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+figure p {
+  padding: 0;
+  margin: 0;
+}
+figcaption {
+  text-align: center;
+  color: var(--color-gray-90);
 }
 
 /* Tags */
