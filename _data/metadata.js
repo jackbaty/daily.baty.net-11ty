@@ -1,5 +1,5 @@
 module.exports = {
-	"title": "Baty.net",
+	"title": "~/Baty.net",
 	"url": "https://baty.net",
 	"language": "en",
 	"description": "Jack Baty's personal blog",
