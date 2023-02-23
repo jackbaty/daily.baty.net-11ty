@@ -302,6 +302,19 @@ img {
 max-width: 100%
 }
 
+blockquote {
+    border-left: 2px solid var(--color-gray-90);
+    padding-left: 2em;
+    margin-left: 1em;
+}
+
+blockquote cite {
+	display: block;
+	text-align: right;
+}
+
+cite::before { content: "\2014 "; }
+
 /* Direct Links / Markdown Headers */
 .header-anchor {
 	text-decoration: none;
