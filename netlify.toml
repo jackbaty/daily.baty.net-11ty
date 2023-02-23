@@ -2,6 +2,15 @@
 	publish = "_site"
 	command = "npm run build"
 
+
+[[redirects]]
+  from = "/feed/"
+  to = "/feed/feed.xml"
+
+[[redirects]]
+  from = "/index.xml"
+  to = "/feed/feed.xml"
+
 #[[plugins]]
 
 	# Opt-in to the Netlify Lighthouse plugin (choose one):
