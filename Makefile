@@ -1,15 +1,17 @@
 SERVER_HOST=server01.baty.net
 SERVER_DIR=/home/jbaty/apps/baty.blog/public_html
-PUBLIC_DIR=/Users/jbaty/sites/baty.net-eleventy/_site/
+SITE_DIR=/Users/jbaty/sites/baty.net-eleventy/_site/
 TARGET=server01.baty.net
 
 .POSIX:
-.PHONY: build checkpoint deploy
+.PHONY: build checkpoint deploy clean
 
 # npx -y pagefind --source public
 
-build:
-	rm -rf $PUBLIC_DIR
+clean:
+	rm -rf $(SITE_DIR)
+
+build: clean
 	npm run build
 
 checkpoint:
