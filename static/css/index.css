@@ -159,7 +159,7 @@ main {
 	padding: 1rem;
 }
 main :first-child {
-	margin-top: 0;
+/*	margin-top: 0; */
 }
 
 header {
@@ -325,6 +325,7 @@ figure p {
 figcaption {
   text-align: center;
   color: var(--color-gray-90);
+  margin-top: 10px; bd
 }
 
 section.footnotes p {
