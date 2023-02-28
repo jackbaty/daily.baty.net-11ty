@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family:  Roboto Condensed, -apple-system, system-ui, sans-serif;
+	--font-family:  RobotoCondensed, -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -371,7 +371,7 @@ max-width: 100%
 }
 
 blockquote {
-    font-family: "Roboto Condensed";
+    font-family: "RobotoCondensed";
     border-left: 2px solid var(--color-gray-90);
     padding-left: 2em;
     margin-left: 1em;
