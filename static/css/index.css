@@ -1,6 +1,6 @@
 /* Defaults */
 :root {
-	--font-family: Roboto Condensed, -apple-system, system-ui, sans-serif;
+	--font-family:  Roboto Condensed, -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 #page-top {
-	background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat;
+	/* background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat; */
 
 	position: absolute;
     top: 0;
@@ -73,7 +73,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: var(--color-gray-90);
     z-index: 0;
 }
 #container {
@@ -265,7 +265,8 @@ header {
 }
 
 h1.post-title {
-margin-bottom: 0;
+    font-family: Oswald;
+    margin-bottom: 0;
 }
 
 /* Posts list */
@@ -286,6 +287,8 @@ margin-bottom: 0;
 }
 
 .home-posts h2.postlist-item {
+
+ font-family: Oswald;
  margin-bottom: 0;
  padding-bottom: 0;
  margin-block-end: 0;
@@ -368,6 +371,7 @@ max-width: 100%
 }
 
 blockquote {
+    font-family: "Roboto Condensed";
     border-left: 2px solid var(--color-gray-90);
     padding-left: 2em;
     margin-left: 1em;
