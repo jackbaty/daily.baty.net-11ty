@@ -7,7 +7,7 @@ tags:
 
 I've been feeling a little dispirited ever since I saw this in the sidebar on YouTube.
 
-<img alt="YouTube thumbnails" src="/img/2023/20230222-youtube.png" width="250">
+<img alt="YouTube thumbnails" src="/img/2023/20230222-youtube.jpg" width="200">
 
 I mean, I was watching a video about Zotero for crying out loud. [Zotero](https://www.zotero.org/) is a boring (but fabulous), academic research tool. And yet, every related/suggested video had the same stupid, formulaic thumbnail: Make a silly face and slap some giant, maybe even SHOCKING! text over the top. 
 
