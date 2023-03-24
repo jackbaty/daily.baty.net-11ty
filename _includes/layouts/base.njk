@@ -31,12 +31,11 @@
 
 		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
 		<style>{% getBundle "css" %}</style>
-		<script defer data-domain="baty.net" src="https://plausible.io/js/script.js"></script>
 	</head>
 	<body>
 		<div id="page-top">
-			<div id="site-title"><a href="/">Jack Baty</a></div>
-		    <div id="site-description">Director of Unspecified Services</div>
+			<div id="site-title"><a href="/">Jack Baty Daily</a></div>
+		    <div id="site-description">Daily notes from Jack about everything</div>
 			<img id="hero-extra-image" src="https://static.baty.net/images/blog-headers/jack-and-iphone.png">
 		</div>
 		<div id="container">
@@ -46,7 +45,7 @@
 
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<!-- ><a href="/" class="home-link">{{ metadata.title }}</a> -->
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
@@ -55,7 +54,9 @@
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
-					<li class="nav-item"><a href="http://oldschool.scripting.com/jack@baty.net/">Daily</a></li>
+					<li class="nav-item"><a rel="me" href="https://baty.net">Blog</a></li>
+				<li class="nav-item"><a rel="me" href="https://baty.social/@jack"><img src="/img/icons/mastodon-icon.svg" width="16px"></a></li>
+				<li class="nav-item"><a href="/feed/feed.xml" alt="RSS Feed"><img src="/img/icons/rss.svg" width="16px"></a></li>
 				</ul>
 			</nav>
 		</header>

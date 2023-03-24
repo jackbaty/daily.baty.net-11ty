@@ -78,6 +78,7 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
@@ -93,6 +94,11 @@ module.exports = function(eleventyConfig) {
 	});
 
   eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItFootnote));
+
+	// shortcode for right-aligned small image
+	eleventyConfig.addShortcode("sideImage", function(path, alt)  {
+		return `<img class="sideImage" src="${path}" alt="${alt}">`});
+
 
 
 	// Features to make your build faster (when you need them)

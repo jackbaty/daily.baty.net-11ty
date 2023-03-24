@@ -1,8 +1,8 @@
 module.exports = {
-	"title": "~/Baty.net",
-	"url": "https://baty.net",
+	"title": "Jack Baty Daily",
+	"url": "https://daily.baty.net",
 	"language": "en",
-	"description": "Jack Baty's personal blog",
+	"description": "Daily notes from Jack about everything",
 	"author": {
 		"name": "Jack Baty",
 		"email": "jack@baty.net",

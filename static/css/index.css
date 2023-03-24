@@ -57,7 +57,7 @@ body {
 }
 
 #page-top {
-	/* background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat; */
+	background: url(https://static.baty.net/images/blog-headers/blue-plain.png) center no-repeat;
 
 	position: absolute;
     top: 0;
@@ -153,7 +153,12 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-
+img.sideImage {
+	float: right;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 15px;}
 
 main {
 	padding: 1rem;
@@ -247,10 +252,10 @@ header {
 }
 
 /* Nav */
-.nav {
+nav {
 	display: flex;
+	margin: auto;
 	padding: 0;
-	margin: 0;
 	list-style: none;
 }
 .nav-item {
@@ -280,6 +285,9 @@ h1.post-title {
 	flex-wrap: wrap;
 	align-items: baseline;
 	/* margin-bottom: 1em; */
+}
+.archive-item {
+  font-size: 0.9rem;
 }
 
 .home-posts article {
@@ -384,6 +392,10 @@ blockquote cite {
 }
 
 cite::before { content: "\2014 "; }
+
+mark {
+  background-color: rgba(15, 149, 193, 0.1);
+ }
 
 /* Direct Links / Markdown Headers */
 .header-anchor {
