@@ -1,8 +1,5 @@
 ---
 layout: layouts/base.njk
-eleventyNavigation:
-  key: Now
-  order: 5
 ---
 
 # What I'm doing Now
