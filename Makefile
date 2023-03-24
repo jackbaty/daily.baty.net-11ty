@@ -21,5 +21,5 @@ checkpoint:
 deploy: build checkpoint
 	git push
 	@echo "\033[0;32mDeploying updates to $(TARGET)...\033[0m"
-	rsync -v -rz --checksum --delete --no-perms $(PUBLIC_DIR) $(SERVER_HOST):$(SERVER_DIR)
+	rsync -v -rz --checksum --delete --no-perms $(SITE_DIR) $(SERVER_HOST):$(SERVER_DIR)
 
