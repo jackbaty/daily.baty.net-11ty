@@ -48,6 +48,8 @@ module.exports = function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
 
+
+
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
@@ -99,7 +101,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("sideImage", function(path, alt)  {
 		return `<img class="sideImage" src="${path}" alt="${alt}">`});
 
-
+  eleventyConfig.addShortcode("currentYear", function() {
+  	return new Date().getFullYear()});
 
 	// Features to make your build faster (when you need them)
 

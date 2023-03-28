@@ -257,6 +257,7 @@ header {
 
 /* Nav */
 nav {
+  font-family: "RobotoCondensed";
 	display: flex;
 	margin: auto;
 	padding: 0;
@@ -423,4 +424,15 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+footer {
+  font-family: "RobotoCondensed";
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  margin: auto;
+  color: var(--color-gray-50);
 }
